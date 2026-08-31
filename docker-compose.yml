@@ -1,0 +1,14 @@
+﻿services:
+  trading-brain:
+    build:
+      context: .
+      dockerfile: Dockerfile.demo
+    container_name: trading-brain-sandbox
+    ports:
+      - "3004:3004"
+    environment:
+      - TRADING_BRAIN_MODE=DEMO
+      - LIVE_TRADING_ENABLED=false
+      - PAPER_TRADING=true
+      - PORT=3004
+    restart: unless-stopped

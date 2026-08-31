@@ -1,0 +1,10 @@
+﻿[
+  {
+    "findingId": "SYNTHETIC_TEST_VECTOR_01",
+    "file": "tests/fixtures/syntheticMarketData.json",
+    "reason": "Synthetic non-routable entropy strings used solely for offline mock order matching tests",
+    "reviewer": "SecOps Lead",
+    "classification": "BENIGN_TEST_FIXTURE",
+    "timestamp": "2026-08-31T14:45:00Z"
+  }
+]

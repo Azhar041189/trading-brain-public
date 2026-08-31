@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.local
+*.log
+.DS_Store
+dist/
+coverage/
+*.db
+*.sqlite
+session_state.json
+release-archive.tar.gz
+cyclonedx-sbom.json
+RELEASE_PROVENANCE.json

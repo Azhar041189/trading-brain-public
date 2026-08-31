@@ -1,0 +1,45 @@
+{
+  "name": "trading-brain-core",
+  "version": "0.9.0-public-beta",
+  "description": "Open-source multi-market quantitative research & probabilistic forecasting framework",
+  "main": "src/dashboard/server.js",
+  "license": "Apache-2.0",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=24.0.0",
+    "pnpm": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "node src/dashboard/server.js",
+    "dev": "TRADING_BRAIN_MODE=DEMO node src/dashboard/server.js",
+    "test": "node tests/runAllInvariants.js",
+    "test:invariants": "node tests/runAllInvariants.js",
+    "check:licenses": "node scripts/check-license-policy.js",
+    "test:sandbox": "bash scripts/raccoon-friction-test.sh"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.112.3",
+    "axios": "^1.7.0",
+    "better-sqlite3": "^13.0.3",
+    "cheerio": "^1.0.0",
+    "cron": "^3.1.0",
+    "dotenv": "^16.4.0",
+    "express": "^4.19.0",
+    "indicatorts": "^2.2.2",
+    "moment-timezone": "^0.5.45",
+    "node-fetch": "^3.3.2",
+    "otplib": "^13.4.1",
+    "pg": "^8.11.0",
+    "redis": "^4.6.0",
+    "sqlite3": "^6.0.1",
+    "technicalindicators": "^3.1.0",
+    "uuid": "^9.0.0",
+    "winston": "^3.13.0",
+    "ws": "^8.21.3",
+    "yahoo-finance2": "^2.12.0"
+  },
+  "devDependencies": {
+    "@cyclonedx/cyclonedx-npm": "^1.18.0",
+    "license-checker": "^25.0.1"
+  }
+}
