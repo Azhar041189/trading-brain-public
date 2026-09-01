@@ -1,0 +1,49 @@
+const config = require('../../config');
+
+module.exports = {
+  id: 'IN',
+  name: 'Indian Markets (NSE/BSE)',
+  timezone: 'Asia/Kolkata',
+  currency: 'INR',
+  currencySymbol: '₹',
+  hours: {
+    preMarketStart: '06:30',
+    marketOpen: '09:15',
+    marketClose: '15:30',
+    learning: '16:00'
+  },
+  defaultWatchlist: [
+    'NIFTY', 'BANKNIFTY', 'FINNIFTY', 'MIDCPNIFTY',
+    'GOLDBEES', 'SILVERBEES', 'NIFTYBEES', 'BANKBEES', 'ITBEES', 'LIQUIDBEES',
+    'RAILTEL', 'TITAGARH', 'JWL', 'CROMPTON', 'PNB', 'HINDCOPPER',
+    'SUPREMEIND', 'LICI', 'BERGEPAINT', 'AEGISLOG', 'AAVAS', 'SYRMA', 'VIJAYA',
+    'TATASTEEL', 'EICHERMOT', 'ZOMATO', 'TRENT', 'BEL', 'HAL',
+    'SUZLON', 'JIOFIN', 'ADANIENT', 'TATAMOTORS', 'MARUTI', 'SUNPHARMA',
+    'INDUSINDBK', 'HEROMOTOCO', 'APOLLOHOSP', 'DRREDDY', 'TATACONSUM',
+    'CIPLA', 'SHRIRAMFIN', 'HINDALCO', 'TECHM', 'HDFCLIFE', 'SBILIFE',
+    'GRASIM', 'RELIANCE', 'HDFCBANK', 'ICICIBANK', 'SBIN', 'TCS', 'INFY',
+    'ITC', 'HINDUNILVR', 'BHARTIARTL', 'LT', 'AXISBANK', 'KOTAKBANK', 'BAJFINANCE'
+  ],
+  lotSizes: {
+    'NIFTY': 65, 'BANKNIFTY': 30, 'FINNIFTY': 60, 'MIDCPNIFTY': 120,
+    'RELIANCE': 250, 'HDFCBANK': 550, 'ICICIBANK': 1375, 'SBIN': 3000,
+    'TCS': 175, 'INFY': 600, 'HINDUNILVR': 300, 'ITC': 3200,
+    'TATASTEEL': 5500, 'EICHERMOT': 150, 'TATAMOTORS': 1425, 'MARUTI': 100
+  },
+  securityIds: {
+    'NIFTY': '13', 'BANKNIFTY': '25', 'FINNIFTY': '27', 'MIDCPNIFTY': '28',
+    'GOLDBEES': '14428', 'SILVERBEES': '10819', 'NIFTYBEES': '10599', 'BANKBEES': '10582',
+    'ITBEES': '14429', 'LIQUIDBEES': '10594',
+    'RELIANCE': '2885', 'HDFCBANK': '1333', 'ICICIBANK': '4963',
+    'TCS': '11536', 'INFY': '1594', 'ITC': '1660', 'HINDUNILVR': '1781',
+    'SBIN': '3045', 'BHARTIARTL': '10604', 'LT': '11483', 'AXISBANK': '5900',
+    'KOTAKBANK': '1922', 'BAJFINANCE': '317', 'MARUTI': '10999',
+    'TATASTEEL': '3499', 'EICHERMOT': '910', 'ZOMATO': '5097', 'TRENT': '1964',
+    'BEL': '383', 'HAL': '2303', 'SUZLON': '6364', 'JIOFIN': '18143',
+    'ADANIENT': '25', 'TATAMOTORS': '3456', 'SUNPHARMA': '3351', 'DRREDDY': '881',
+    'CIPLA': '694', 'HINDALCO': '1363', 'TECHM': '13538', 'HEROMOTOCO': '1348',
+    'RAILTEL': '2868', 'TITAGARH': '15575', 'JWL': '17875', 'CROMPTON': '17094',
+    'PNB': '10666', 'HINDCOPPER': '17963', 'SUPREMEIND': '3432', 'LICI': '5324',
+    'BERGEPAINT': '404', 'AEGISLOG': '28', 'AAVAS': '24948', 'SYRMA': '12489', 'VIJAYA': '5138'
+  }
+};

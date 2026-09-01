@@ -1,0 +1,55 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TradingBrainReleaseProvenance",
+  "type": "object",
+  "required": [
+    "release",
+    "publishedAt",
+    "license",
+    "runtime",
+    "provenance",
+    "attestation",
+    "verification"
+  ],
+  "properties": {
+    "release": { "type": "string" },
+    "publishedAt": { "type": "string", "format": "date-time" },
+    "license": { "type": "string", "enum": ["Apache-2.0"] },
+    "runtime": {
+      "type": "object",
+      "required": ["node", "pnpm"],
+      "properties": {
+        "node": { "type": "string" },
+        "pnpm": { "type": "string" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["gitCommitSha", "gitTreeSha", "releaseArchiveSha256"],
+      "properties": {
+        "gitCommitSha": { "type": "string" },
+        "gitTreeSha": { "type": "string" },
+        "releaseArchiveSha256": { "type": "string" },
+        "dockerDigest": { "type": "string" },
+        "sbomDigest": { "type": "string" }
+      }
+    },
+    "attestation": {
+      "type": "object",
+      "required": ["sigstoreIssuer", "verificationCommand"],
+      "properties": {
+        "sigstoreIssuer": { "type": "string" },
+        "verificationCommand": { "type": "string" }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": ["publicArtifactInvariantTests", "licensePolicyStatus", "executionModeDefault"],
+      "properties": {
+        "publicArtifactInvariantTests": { "type": "string" },
+        "licensePolicyStatus": { "type": "string" },
+        "executionModeDefault": { "type": "string" }
+      }
+    }
+  }
+}

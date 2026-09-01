@@ -1,0 +1,28 @@
+﻿# Multi-stage Dockerfile for Trading Brain Public Sandbox (DEMO mode)
+FROM node:24-alpine AS base
+WORKDIR /app
+
+# Install pnpm
+RUN corepack enable && corepack prepare pnpm@10.4.1 --activate
+
+# Copy package descriptors
+COPY package.json ./
+
+# Install dependencies (frozen lockfile)
+RUN pnpm install --prod
+
+# Copy application source (excluding live keys and private databases)
+COPY src ./src
+COPY tests ./tests
+COPY scripts ./scripts
+
+# Set default public demo environment
+ENV TRADING_BRAIN_MODE=DEMO
+ENV LIVE_TRADING_ENABLED=false
+ENV PAPER_TRADING=true
+ENV PORT=3004
+ENV LOG_LEVEL=info
+
+EXPOSE 3004
+
+CMD ["node", "src/dashboard/server.js"]
